@@ -16,5 +16,7 @@ spec:
       containers:
         - name: frontend
           image: 543650198843.dkr.ecr.ca-central-1.amazonaws.com/frontend:v3
+      imagePullSecrets:
+        - name: ecr-secret
           ports:
             - containerPort: 80
