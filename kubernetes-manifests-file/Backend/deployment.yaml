@@ -16,6 +16,8 @@ spec:
       containers:
         - name: api
           image: 543650198843.dkr.ecr.ca-central-1.amazonaws.com/backend:v3
+      imagePullSecrets:
+        - name: ecr-secret
           env:
             - name: MONGO_CONN_STR
               value: mongodb://mongodb-svc:27017/todo?directConnection=true
